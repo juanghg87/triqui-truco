@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/juanghg87/triqui-truco.git/static/css/main.54737ac0.css",
+    "main.js": "/juanghg87/triqui-truco.git/static/js/main.173da88b.js",
+    "static/js/453.84f2db6a.chunk.js": "/juanghg87/triqui-truco.git/static/js/453.84f2db6a.chunk.js",
+    "index.html": "/juanghg87/triqui-truco.git/index.html",
+    "main.54737ac0.css.map": "/juanghg87/triqui-truco.git/static/css/main.54737ac0.css.map",
+    "main.173da88b.js.map": "/juanghg87/triqui-truco.git/static/js/main.173da88b.js.map",
+    "453.84f2db6a.chunk.js.map": "/juanghg87/triqui-truco.git/static/js/453.84f2db6a.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.54737ac0.css",
+    "static/js/main.173da88b.js"
+  ]
+}
