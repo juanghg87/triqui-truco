@@ -162,7 +162,7 @@ const ButtonFl = () => {
           <h2>Reglas</h2>
           <ul>
             <li>
-              Solo hay un ganador, el otro es un <span>simple perdedor</span>
+              Solo hay un ganador, el otro es un <span>simple perdedor.</span>
             </li>
             <li>Puedes estar donde otros han estado.</li>
             <li>Sin llorar...</li>

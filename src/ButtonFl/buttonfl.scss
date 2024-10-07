@@ -7,19 +7,10 @@
 }
 
 .containerButton {
-    // background-color: aliceblue;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-
     position: relative;
-    // margin: 20px auto;
-    // rotate: 90deg;
-
-    // @include mobile{
-    //     width: 15%;
-    // }
-
 }
 
 .mainContainer {
@@ -52,9 +43,7 @@
 .messageInfo {
     width: 100%;
     height: auto;
-    // background-color: white;
     position: absolute;
-    // z-index: -1;
     top: -600%;
     text-align: center;
     background: rgba(255, 0, 225, 0.76);
@@ -69,7 +58,7 @@
     letter-spacing: 1px;
 
     @include desktop {
-        top: -400%;
+        top: -600%;
         font-size: 1.5rem;
     }
 
