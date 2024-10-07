@@ -1,0 +1,436 @@
+@import "../App.scss";
+@import url("https://fonts.googleapis.com/css?family=Raleway");
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+
+:root {
+    --glow-color: #ff00dd;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    @include desktop {
+        margin-top: 10%;
+    }
+
+    @include tablet {
+        margin-top: 0;
+    }
+
+    @include mobile {
+        margin-top: 0;
+    }
+}
+
+.tittle {
+    margin-top: 50px;
+    color: white;
+    font-size: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Shadows Into Light", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 3px;
+    font-weight: bolder;
+    -webkit-text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3),
+        0 0 0.45em var(--glow-color);
+    -moz-text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3),
+        0 0 0.45em var(--glow-color);
+    text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em var(--glow-color);
+    animation: 3s linear infinite;
+
+    @include desktop {
+        font-size: 5rem;
+    }
+
+    @include tablet {
+        font-size: 3rem;
+    }
+
+    @include mobile {
+        display: flex;
+        font-size: 2rem;
+    }
+}
+
+.tittle span {
+    // margin-right: -0.8em;
+    -webkit-text-shadow: 0 0 0.125em #15ff0069,
+        0 0 0.45em #15ff009f;
+    -moz-text-shadow: 0 0 0.125em #15ff0069,
+        0 0 0.45em #15ff009f;
+    text-shadow: 0 0 0.125em #15ff0069, 0 0 0.45em #15ff009f;
+    animation: text-flicker 5s infinite;
+    padding-left: 15px;
+}
+
+.reset {
+    margin-top: 25px;
+    margin-bottom: 50px;
+    color: var(--glow-color);
+    cursor: pointer;
+    padding: 0.35em 1em;
+    border: 0.15em solid var(--glow-color);
+    border-radius: 0.45em;
+    background: none;
+    perspective: 2em;
+    font-family: "Raleway", sans-serif;
+    font-size: 2em;
+    font-weight: 900;
+    letter-spacing: 1em;
+    -webkit-box-shadow: inset 0px 0px 0.5em 0px var(--glow-color),
+        0px 0px 0.5em 0px var(--glow-color);
+    -moz-box-shadow: inset 0px 0px 0.5em 0px var(--glow-color),
+        0px 0px 0.5em 0px var(--glow-color);
+    box-shadow: inset 0px 0px 0.5em 0px var(--glow-color),
+        0px 0px 0.5em 0px var(--glow-color);
+    animation: border-flicker 2s linear infinite;
+}
+
+.special {
+    rotate: 25;
+}
+
+.glowing-txt {
+    float: left;
+    margin-right: -0.8em;
+    -webkit-text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3),
+        0 0 0.45em var(--glow-color);
+    -moz-text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3),
+        0 0 0.45em var(--glow-color);
+    text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em var(--glow-color);
+    animation: text-flicker 3s linear infinite;
+}
+
+.faulty-letter {
+    opacity: 0.1;
+    animation: faulty-flicker 2s linear infinite;
+}
+
+.reset::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0.7;
+    filter: blur(1em);
+    transform: translateY(120%) rotateX(95deg) scale(1, 0.35);
+    background: var(--glow-color);
+    pointer-events: none;
+}
+
+.reset::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    z-index: -1;
+    background-color: var(--glow-color);
+    box-shadow: 0 0 2em 0.2em var(--glow-color);
+    transition: opacity 100ms linear;
+}
+
+.reset:hover {
+    color: rgba(0, 0, 0, 0.8);
+    text-shadow: none;
+    animation: none;
+}
+
+.reset:hover .glowing-txt {
+    animation: none;
+}
+
+.reset:hover .faulty-letter {
+    animation: none;
+    text-shadow: none;
+    opacity: 1;
+}
+
+.reset:hover:before {
+    filter: blur(1.5em);
+    opacity: 1;
+}
+
+.reset:hover:after {
+    opacity: 1;
+}
+
+@keyframes faulty-flicker {
+    0% {
+        opacity: 0.1;
+    }
+
+    2% {
+        opacity: 0.1;
+    }
+
+    4% {
+        opacity: 0.5;
+    }
+
+    19% {
+        opacity: 0.5;
+    }
+
+    21% {
+        opacity: 0.1;
+    }
+
+    23% {
+        opacity: 1;
+    }
+
+    80% {
+        opacity: 0.5;
+    }
+
+    83% {
+        opacity: 0.4;
+    }
+
+    87% {
+        opacity: 1;
+    }
+}
+
+@keyframes text-flicker {
+    0% {
+        opacity: 0.1;
+    }
+
+    2% {
+        opacity: 1;
+    }
+
+    8% {
+        opacity: 0.1;
+    }
+
+    9% {
+        opacity: 1;
+    }
+
+    12% {
+        opacity: 0.1;
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    25% {
+        opacity: 0.3;
+    }
+
+    30% {
+        opacity: 1;
+    }
+
+    70% {
+        opacity: 0.7;
+    }
+
+    72% {
+        opacity: 0.2;
+    }
+
+    77% {
+        opacity: 0.9;
+    }
+
+    100% {
+        opacity: 0.9;
+    }
+}
+
+@keyframes border-flicker {
+    0% {
+        opacity: 0.1;
+    }
+
+    2% {
+        opacity: 1;
+    }
+
+    4% {
+        opacity: 0.1;
+    }
+
+    8% {
+        opacity: 1;
+    }
+
+    70% {
+        opacity: 0.7;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .reset {
+        font-size: 1em;
+    }
+}
+
+
+.boxes {
+    display: flex;
+    height: 10rem;
+    width: 10rem;
+    // border: 1px solid #14FF00;
+    background-color: #15ff009f;
+    border-radius: 10%;
+    cursor: pointer;
+    margin: 6px 3px;
+    // border: 0.3em solid var(--glow-color);
+    perspective: 2em;
+    // -webkit-box-shadow: inset 0px 0px 0.5em 0px var(--glow-color),
+    //     0px 0px 0.5em 0px var(--glow-color);
+    // -moz-box-shadow: inset 0px 0px 0.5em 0px var(--glow-color),
+    //     0px 0px 0.5em 0px var(--glow-color);
+    // box-shadow: inset 0px 0px 0.5em 0px var(--glow-color),
+    //     0px 0px 0.5em 0px var(--glow-color);
+    animation: border-flicker 2s linear infinite;
+
+    @include desktop {
+        width: 6rem;
+        height: 6rem;
+    }
+
+    @include tablet {
+        width: 10rem;
+        height: 10rem;
+    }
+
+    @include mobile {
+        height: 5rem;
+        width: 5rem;
+    }
+}
+
+.board {
+    max-height: 600px;
+    max-width: 564px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+
+    // @include desktop{
+    //     width: 60%;
+    //     height: 60%;
+    // }
+
+    @include tablet {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.messageLoser {
+    height: 300px;
+    width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: auto;
+    background: rgba(239, 24, 214, 0.35);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(16.5px);
+    -webkit-backdrop-filter: blur(16.5px);
+    border-radius: 10px;
+    border: 2px solid rgba(239, 24, 214, 0.623);
+    position: fixed;
+    margin: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    // z-index: 1;
+    font-size: 3rem;
+    font-family: "Shadows Into Light", cursive;
+    color: white;
+    letter-spacing: 2px;
+    padding: 10%;
+    line-height: 1.2;
+
+    @include desktop {
+        height: 10%;
+        width: 70%;
+        font-size: 5rem;
+        // padding: 50%;
+    }
+
+    @include tablet {
+        width: 50%;
+        height: 30%;
+        font-size: 2.5rem;
+    }
+
+    @include mobile {
+        width: 90%;
+        line-height: 1.2;
+        // height: 10px;
+        // font-size: 2rem;
+    }
+
+    // @include tablet{
+    //     width: 100%;
+    //     height: 100%;
+    // }
+}
+
+
+.boxes img {
+    margin: 10px;
+
+    @include mobile {
+        margin: 0;
+    }
+
+    @include tablet {
+        margin: 10px;
+    }
+}
+
+.tittle img {
+    padding: 20px;
+    height: 50px;
+
+    @include desktop {
+        height: 100px;
+    }
+
+    @include tablet {
+        height: 100px;
+    }
+}
