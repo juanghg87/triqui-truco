@@ -156,9 +156,7 @@ const Triqui = () => {
         "Cuando crezca lo intenta otra vez.",
         "No voltees que te están mirando, que pena.",
         "No es tu culpa, fue el ácido fólico.",
-        "No, que otro juegue mejor.",
-        "cuando se es enchimbado le fluye natural",
-        "Buena fabrica de cromosomas",
+        "No, que otro juegue mejor."
     ]
     const randomMessage = message[Math.floor(Math.random() * message.length)];
     const [resetAnim, setResetAnim] = useState(false);
