@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/juanghg87/triqui-truco.git/static/css/main.63c91bc3.css",
-    "main.js": "/juanghg87/triqui-truco.git/static/js/main.2540b358.js",
-    "static/js/453.84f2db6a.chunk.js": "/juanghg87/triqui-truco.git/static/js/453.84f2db6a.chunk.js",
-    "index.html": "/juanghg87/triqui-truco.git/index.html",
-    "main.63c91bc3.css.map": "/juanghg87/triqui-truco.git/static/css/main.63c91bc3.css.map",
-    "main.2540b358.js.map": "/juanghg87/triqui-truco.git/static/js/main.2540b358.js.map",
-    "453.84f2db6a.chunk.js.map": "/juanghg87/triqui-truco.git/static/js/453.84f2db6a.chunk.js.map"
+    "main.css": "/triqui-truco/static/css/main.63c91bc3.css",
+    "main.js": "/triqui-truco/static/js/main.ca472069.js",
+    "static/js/453.84f2db6a.chunk.js": "/triqui-truco/static/js/453.84f2db6a.chunk.js",
+    "index.html": "/triqui-truco/index.html",
+    "main.63c91bc3.css.map": "/triqui-truco/static/css/main.63c91bc3.css.map",
+    "main.ca472069.js.map": "/triqui-truco/static/js/main.ca472069.js.map",
+    "453.84f2db6a.chunk.js.map": "/triqui-truco/static/js/453.84f2db6a.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.63c91bc3.css",
-    "static/js/main.2540b358.js"
+    "static/js/main.ca472069.js"
   ]
 }
